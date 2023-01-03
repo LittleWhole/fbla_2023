@@ -47,6 +47,9 @@ dependencies:
   swipe_image_gallery: ^0.8.0
   cross_file_image: ^1.0.0
   firebase_storage: ^11.0.10
+  cached_network_image: ^3.2.3
+  flutter_cache_manager: ^3.3.0
+  intl: ^0.17.0
 
 dev_dependencies:
   flutter_test:

@@ -1,3 +1,4 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
@@ -97,7 +98,13 @@ class _FeedState extends State<Feed> {
     );*/
     return AspectRatio(
       aspectRatio: 1,
-      child: Image.network(fit: BoxFit.cover, imageURL),
+      child: CachedNetworkImage(
+        fit: BoxFit.cover,
+        imageUrl: imageURL,
+        progressIndicatorBuilder: (context, url, downloadProgress) =>
+            CircularProgressIndicator(value: downloadProgress.progress),
+        errorWidget: (context, url, error) => Icon(Icons.error),
+      ),
     );
   }
 

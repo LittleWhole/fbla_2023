@@ -4,6 +4,7 @@ import 'package:fbla_2023/shared/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
+import 'package:intl/intl.dart';
 import 'package:provider/provider.dart';
 
 import '../../services/auth.dart';
@@ -84,7 +85,10 @@ class _MyStudentsState extends State<MyStudents> {
                   //title: Text(DatabaseService(uid: _auth.currentUser().uid).fetchStudentName(snapshot.data![index])),
                   trailing: const Icon(Icons.arrow_forward_ios),
                   onTap: () async {
-                    setState(() {});
+                    showDialog(
+                        context: context,
+                        builder: ((context) =>
+                            confirmAbsenceDialog("this student")));
                   },
                 ),
               );
@@ -102,5 +106,60 @@ class _MyStudentsState extends State<MyStudents> {
         return Text("hello");
       },
     );*/
+  }
+
+  Widget confirmAbsenceDialog(String name) {
+    return AlertDialog(
+      title: const Text('Declare an Absence'),
+      content: Text('Would you like to declare an absence for $name?'),
+      actions: [
+        TextButton(
+          child: const Text('Yes'),
+          onPressed: () async {
+            /*await DatabaseService(uid: _auth.currentUser().uid)
+                .declareAbsence(globals.currentStudent);
+            Navigator.pop(context);*/
+            Navigator.pop(context);
+            showDateRangePicker(
+                    context: context,
+                    firstDate: DateTime.now(),
+                    lastDate: DateTime.fromMillisecondsSinceEpoch(
+                        DateTime.now().millisecondsSinceEpoch + 31556926000))
+                .then((value) async {
+              if (value == null) {
+                return;
+              } else {
+                /*await DatabaseService(uid: _auth.currentUser().uid)
+                    .declareAbsence(
+                        globals.currentStudent, value.start, value.end);*/
+                showDialog(
+                  context: context,
+                  builder: (context) => AlertDialog(
+                      title: const Text("Absence Declared"),
+                      content: Text(
+                          "You successfully declared absence for this student for the dates ${DateFormat.yMd().format(value.start)} to ${DateFormat.yMd().format(value.end)}."),
+                      actions: [
+                        TextButton(
+                            child: const Text('Ok'),
+                            onPressed: () async {
+                              /*await DatabaseService(uid: _auth.currentUser().uid)
+                .declareAbsence(globals.currentStudent);
+            Navigator.pop(context);*/
+                              Navigator.pop(context);
+                            })
+                      ]),
+                );
+              }
+            });
+          },
+        ),
+        TextButton(
+          child: const Text('No'),
+          onPressed: () {
+            Navigator.pop(context);
+          },
+        ),
+      ],
+    );
   }
 }
