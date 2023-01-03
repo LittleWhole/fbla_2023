@@ -51,6 +51,9 @@ class _PostState extends State<Post> {
                 Padding(
                   padding: const EdgeInsets.only(right: 16),
                   child: OutlinedButton(
+                      style: OutlinedButton.styleFrom(
+                        textStyle: TextStyle(color: const Color(0xFF2B4A9D)),
+                      ),
                       child: Row(
                         children: [
                           const Icon(Icons.send),
@@ -96,7 +99,7 @@ class _PostState extends State<Post> {
                           hintText: 'Enter a caption...'),
                     ),
                     Card(
-                      color: Colors.blue,
+                      color: const Color(0xFF2B4A9D),
                       child: ListTile(
                         textColor: Colors.white,
                         title: const Text('Pick images'),

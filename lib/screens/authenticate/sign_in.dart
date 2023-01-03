@@ -28,9 +28,9 @@ class _SignInState extends State<SignIn> {
         : Scaffold(
             backgroundColor: Colors.white,
             appBar: AppBar(
-              backgroundColor: Colors.blue,
+              backgroundColor: const Color(0xFF2B4A9D),
               elevation: 0.0,
-              title: const Text('Sign in to FBLA'),
+              title: const Text('Sign in to Alatus'),
               actions: <Widget>[
                 TextButton.icon(
                   style: TextButton.styleFrom(foregroundColor: Colors.white),
@@ -77,7 +77,7 @@ class _SignInState extends State<SignIn> {
                       const SizedBox(height: 20.0),
                       ElevatedButton(
                         style: ElevatedButton.styleFrom(
-                          primary: Colors.blue,
+                          primary: const Color(0xFF2B4A9D),
                           onPrimary: Colors.white,
                         ),
                         child: const Text('Sign In'),

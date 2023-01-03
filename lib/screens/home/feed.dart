@@ -44,7 +44,7 @@ class _FeedState extends State<Feed> {
             width: avatarDiameter,
             height: avatarDiameter,
             decoration: const BoxDecoration(
-              color: Colors.blue,
+              color: const Color(0xFF2B4A9D),
               shape: BoxShape.circle,
               image: DecorationImage(
                 fit: BoxFit.fill,
@@ -81,7 +81,7 @@ class _FeedState extends State<Feed> {
       width: double.infinity,
       height: 200,
       decoration: const BoxDecoration(
-        color: Colors.blue,
+        color: const Color(0xFF2B4A9D),
         shape: BoxShape.rectangle,
         image: DecorationImage(
           fit: BoxFit.fill,

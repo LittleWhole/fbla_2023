@@ -29,8 +29,8 @@ class _HomeState extends State<Home> {
     return Scaffold(
       backgroundColor: Colors.grey[50],
       appBar: AppBar(
-        title: const Text('FBLA 2023'),
-        backgroundColor: Colors.blue,
+        title: const Text('Alatus'),
+        backgroundColor: const Color(0xFF2B4A9D),
         elevation: 0.0,
       ),
       body: getWidget(_selectedIndex),
@@ -55,7 +55,7 @@ class _HomeState extends State<Home> {
           ),
         ],
         currentIndex: _selectedIndex,
-        selectedItemColor: Colors.blue,
+        selectedItemColor: const Color(0xFF2B4A9D),
         unselectedItemColor: Colors.grey,
         showUnselectedLabels: true,
         onTap: (index) async {
@@ -98,6 +98,7 @@ class _HomeState extends State<Home> {
       case 0:
         return FloatingActionButton.extended(
           icon: Icon(Icons.add),
+          backgroundColor: const Color(0xFF2B4A9D),
           elevation: 4.0,
           label: const Text('Post'),
           onPressed: () async {
@@ -109,6 +110,7 @@ class _HomeState extends State<Home> {
         if (await _db.accountType != 'Parent') {
           return FloatingActionButton.extended(
             icon: Icon(Icons.add),
+            backgroundColor: const Color(0xFF2B4A9D),
             elevation: 4.0,
             label: const Text('Event'),
             onPressed: () async {},
@@ -119,6 +121,7 @@ class _HomeState extends State<Home> {
         if (await _db.accountType != 'Parent') {
           return FloatingActionButton.extended(
             icon: Icon(Icons.add),
+            backgroundColor: const Color(0xFF2B4A9D),
             elevation: 4.0,
             label: const Text('Announcement'),
             onPressed: () {},
@@ -130,6 +133,7 @@ class _HomeState extends State<Home> {
       default:
         return FloatingActionButton.extended(
           icon: Icon(Icons.add),
+          backgroundColor: const Color(0xFF2B4A9D),
           elevation: 4.0,
           label: const Text('Post'),
           onPressed: () {},

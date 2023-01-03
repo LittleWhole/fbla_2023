@@ -31,9 +31,9 @@ class _RegisterState extends State<Register> {
             resizeToAvoidBottomInset: false,
             backgroundColor: Colors.white,
             appBar: AppBar(
-              backgroundColor: Colors.blue,
+              backgroundColor: const Color(0xFF2B4A9D),
               elevation: 0.0,
-              title: const Text('Register for FBLA'),
+              title: const Text('Register for Alatus'),
               actions: <Widget>[
                 TextButton.icon(
                   style: TextButton.styleFrom(foregroundColor: Colors.white),
@@ -104,7 +104,7 @@ class _RegisterState extends State<Register> {
                       const SizedBox(height: 20.0),
                       ElevatedButton(
                         style: ElevatedButton.styleFrom(
-                          primary: Colors.blue,
+                          primary: const Color(0xFF2B4A9D),
                           onPrimary: Colors.white,
                         ),
                         child: const Text('Register'),

@@ -51,7 +51,7 @@ class _ProfileState extends State<Profile> {
                   width: 100,
                   height: 100,
                   decoration: const BoxDecoration(
-                    color: Colors.blue,
+                    color: const Color(0xFF2B4A9D),
                     shape: BoxShape.circle,
                     image: DecorationImage(
                       fit: BoxFit.cover,
@@ -104,7 +104,7 @@ class _ProfileState extends State<Profile> {
                     shrinkWrap: true,
                     children: [
                       Card(
-                        color: Colors.blue,
+                        color: const Color(0xFF2B4A9D),
                         child: ListTile(
                           textColor: Colors.white,
                           title: const Text('Manage My Students'),
