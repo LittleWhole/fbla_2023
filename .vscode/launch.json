@@ -5,18 +5,18 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "fbla_2023",
+            "name": "Alatus",
             "request": "launch",
             "type": "dart"
         },
         {
-            "name": "fbla_2023 (profile mode)",
+            "name": "Alatus (profile mode)",
             "request": "launch",
             "type": "dart",
             "flutterMode": "profile"
         },
         {
-            "name": "fbla_2023 (release mode)",
+            "name": "Alatus (release mode)",
             "request": "launch",
             "type": "dart",
             "flutterMode": "release"

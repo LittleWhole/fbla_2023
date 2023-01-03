@@ -1,4 +1,4 @@
-package com.example.fbla_2023
+package com.example.Alatus
 
 import io.flutter.embedding.android.FlutterActivity
 

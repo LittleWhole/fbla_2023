@@ -90,12 +90,12 @@ BEGIN
         BLOCK "040904e4"
         BEGIN
             VALUE "CompanyName", "com.example" "\0"
-            VALUE "FileDescription", "fbla_2023" "\0"
+            VALUE "FileDescription", "Alatus" "\0"
             VALUE "FileVersion", VERSION_AS_STRING "\0"
-            VALUE "InternalName", "fbla_2023" "\0"
+            VALUE "InternalName", "Alatus" "\0"
             VALUE "LegalCopyright", "Copyright (C) 2022 com.example. All rights reserved." "\0"
-            VALUE "OriginalFilename", "fbla_2023.exe" "\0"
-            VALUE "ProductName", "fbla_2023" "\0"
+            VALUE "OriginalFilename", "Alatus.exe" "\0"
+            VALUE "ProductName", "Alatus" "\0"
             VALUE "ProductVersion", VERSION_AS_STRING "\0"
         END
     END

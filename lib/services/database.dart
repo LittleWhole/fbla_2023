@@ -38,7 +38,7 @@ class DatabaseService {
       .then((doc) => (doc.get('firstname') ?? '') + ' ' + doc.get('lastname'));
 
   Future<List<dynamic>> get posts => postCollection
-      //.orderBy('timestamp', descending: true)
+      .orderBy('timestamp', descending: true)
       .get()
       .then((value) => value.docs);
 

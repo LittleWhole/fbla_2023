@@ -1,4 +1,4 @@
-# fbla_2023
+# Alatus
 
 A new Flutter project.
 

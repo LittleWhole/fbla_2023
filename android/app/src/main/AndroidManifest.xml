@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.fbla_2023">
+    package="com.example.Alatus">
    <application
-        android:label="fbla_2023"
+        android:label="Alatus"
         android:name="${applicationName}"
         android:icon="@mipmap/launcher_icon">
         <activity

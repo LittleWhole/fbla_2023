@@ -1,6 +1,6 @@
 import 'dart:async';
 
-import 'package:fbla_2023/shared/constants.dart';
+import 'package:Alatus/shared/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';

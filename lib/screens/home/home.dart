@@ -1,7 +1,7 @@
-import 'package:fbla_2023/screens/home/calendar.dart';
-import 'package:fbla_2023/screens/home/feed.dart';
-import 'package:fbla_2023/screens/home/profile.dart';
-import 'package:fbla_2023/services/auth.dart';
+import 'package:Alatus/screens/home/calendar.dart';
+import 'package:Alatus/screens/home/feed.dart';
+import 'package:Alatus/screens/home/profile.dart';
+import 'package:Alatus/services/auth.dart';
 import 'package:flutter/material.dart';
 
 import '../../data/globals.dart' as globals;

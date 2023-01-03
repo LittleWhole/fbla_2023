@@ -1,10 +1,10 @@
-import 'package:fbla_2023/screens/authenticate/authenticate.dart';
-import 'package:fbla_2023/screens/home/home.dart';
+import 'package:Alatus/screens/authenticate/authenticate.dart';
+import 'package:Alatus/screens/home/home.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import "package:flutter/material.dart";
 import 'package:provider/provider.dart';
 
-import 'package:fbla_2023/data/globals.dart' as globals;
+import 'package:Alatus/data/globals.dart' as globals;
 
 import 'home/changepassword.dart';
 import 'home/editprofile.dart';

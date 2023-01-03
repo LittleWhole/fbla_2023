@@ -1,6 +1,6 @@
-import 'package:fbla_2023/services/auth.dart';
-import 'package:fbla_2023/shared/constants.dart';
-import 'package:fbla_2023/shared/loading.dart';
+import 'package:Alatus/services/auth.dart';
+import 'package:Alatus/shared/constants.dart';
+import 'package:Alatus/shared/loading.dart';
 import 'package:flutter/material.dart';
 
 class Register extends StatefulWidget {
