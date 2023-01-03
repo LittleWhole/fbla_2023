@@ -12,7 +12,7 @@ const textInputDecoration = InputDecoration(
 );
 
 const TextStyle titleStyle =
-    TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
+    TextStyle(fontSize: 29, fontWeight: FontWeight.bold);
 
 const TextStyle subtitleStyle =
     TextStyle(fontSize: 20, fontWeight: FontWeight.normal);

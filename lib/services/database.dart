@@ -42,16 +42,40 @@ class DatabaseService {
       .get()
       .then((value) => value.docs);
 
-  /*Future updateUserData(String sugars, String name, int strength) async {
+  Future updateUserData(String firstname, String lastname, String type) async {
     return await userCollection.doc(uid).set({
-      'sugars': sugars,
-      'name': name,
-      'strength': strength,
+      'firstname': firstname,
+      'lastname': lastname,
+      'type': type,
+    });
+  }
+
+  Future newPost(String user, String caption, List<String?> images,
+      DateTime timestamp) async {
+    return await postCollection.add({
+      'user': user,
+      'caption': caption,
+      'images': images,
+      'timestamp': timestamp,
+      'likes': 0,
+      'comments': <String, String>{},
+    });
+  }
+
+  Future updatePost(String id, String user, String caption,
+      List<String?> images, DateTime timestamp) async {
+    return await postCollection.doc(id).set({
+      'user': user,
+      'caption': caption,
+      'images': images,
+      'timestamp': timestamp,
+      'likes': 0,
+      'comments': <String, String>{},
     });
   }
 
   // brew list from snapshot
-  List<Brew> _brewListFromSnapshot(QuerySnapshot snapshot) {
+  /*List<Brew> _brewListFromSnapshot(QuerySnapshot snapshot) {
     return snapshot.docs.map((doc) {
       return Brew(
         name: doc.data()['name'] ?? '',

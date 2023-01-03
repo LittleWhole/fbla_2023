@@ -72,7 +72,9 @@ class _ProfileState extends State<Profile> {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Text(globals.name, style: titleStyle),
+                      FittedBox(
+                          fit: BoxFit.scaleDown,
+                          child: Text(globals.name, style: titleStyle)),
                       const SizedBox(height: 5),
                       Text(_auth.email),
                       const SizedBox(height: 5),

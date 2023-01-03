@@ -17,6 +17,8 @@ class _RegisterState extends State<Register> {
   bool loading = false;
 
   // text field state
+  String firstname = '';
+  String lastname = '';
   String email = '';
   String password = '';
   String error = '';
@@ -26,6 +28,7 @@ class _RegisterState extends State<Register> {
     return loading
         ? Loading()
         : Scaffold(
+            resizeToAvoidBottomInset: false,
             backgroundColor: Colors.white,
             appBar: AppBar(
               backgroundColor: Colors.blue,
@@ -47,6 +50,30 @@ class _RegisterState extends State<Register> {
                   key: _formKey,
                   child: Column(
                     children: <Widget>[
+                      const SizedBox(height: 20.0),
+                      TextFormField(
+                        validator: (value) =>
+                            value!.isEmpty ? 'Enter a first name' : null,
+                        onChanged: (value) => {
+                          setState(() {
+                            firstname = value;
+                          })
+                        },
+                        decoration: textInputDecoration.copyWith(
+                            hintText: 'First Name'),
+                      ),
+                      const SizedBox(height: 20.0),
+                      TextFormField(
+                        validator: (value) =>
+                            value!.isEmpty ? 'Enter a last name' : null,
+                        onChanged: (value) => {
+                          setState(() {
+                            lastname = value;
+                          })
+                        },
+                        decoration:
+                            textInputDecoration.copyWith(hintText: 'Last Name'),
+                      ),
                       const SizedBox(height: 20.0),
                       TextFormField(
                         validator: (value) =>
@@ -84,8 +111,9 @@ class _RegisterState extends State<Register> {
                         onPressed: () async {
                           if (_formKey.currentState!.validate()) {
                             setState(() => loading = true);
-                            dynamic result = await _auth
-                                .registerWithEmailAndPassword(email, password);
+                            dynamic result =
+                                await _auth.registerWithEmailAndPassword(
+                                    firstname, lastname, email, password);
                             if (result == null) {
                               setState(() {
                                 loading = false;
